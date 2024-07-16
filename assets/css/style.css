@@ -1,10 +1,131 @@
-.cards-title{
-    font-family: "Roboto", sans-serif;
-    font-weight: 200;
-    font-style: normal;
+body{
+    margin: 0;
+    padding: 0;
 }
-.cards-text{
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    font-style: normal;  
+nav{
+    grid-area: nav;
+    background-color: #000;
+    height: 10vh;
+    width: 100vw;
+    color: #fff;
+    text-align: center;
+}
+aside{
+    grid-area: aside;
+    background-color: rgb(52, 64, 236);
+    height: 90vh;
+    width: 20vw;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+section{
+    grid-area: section;
+    background-color: white;
+    max-height: 90vh;
+    width: 80vw;
+    color:black;
+    text-align: center;
+    overflow-y: scroll;
+    display: flex;
+    max-height: 100vh;
+}
+footer{
+    grid-area: footer;
+    background-color: #000;
+    height: 10vh;
+    /* width: 100vw; */
+    color: white;
+    text-align: center;
+    }
+
+.grid-container{
+    display: grid;
+    grid-template-areas: 
+    "nav nav"
+    "aside section"
+    "footer footer";
+
+    /* grid-template-rows: 0vh 90vh 1vh; */
+}
+.grid-products{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    margin: 10px;
+}
+.grid-item{
+    display: grid;
+    flex-direction: row;
+    height: 400px;
+}
+.card{
+    border: solid;
+    border-color: black;
+    border-width: 2px;
+    width: 18rem; 
+    text-align: center; 
+    height: auto;
+    background-color: white;
+    height: 25rem;
+}
+.img{
+    margin: 1px; 
+    width: 280px; 
+    height: 300px;
+}
+.botom{
+    background-color: rgb(63, 63, 196); 
+    color: white;
+}
+.navbar{
+    gap: 20px;
+}
+
+@media (min-width: 576px) {
+    nav{
+        display: none;
+    }
+    footer{
+        width: 20vw;
+    }
+    .celu{
+        display: none;
+
+    }
+    aside{
+        display: flex;
+    }
+    .comp{
+        display: ;
+    }
+    .barraselec{
+        background-color: rgb(16, 117, 206);
+    }
+}
+@media (max-width: 576px) {
+    .container{
+        grid-template-areas:
+            "nav nav"
+        "aside section"
+        /* "products products" */
+        "footer footer";
+    }
+nav{
+    display: flex;
+    justify-content: flex-end;
+    background-color: rgb(52, 64, 236);
+    width: 100%;
+}
+.comp{
+    display: none;
+}
+aside{
+    display: none;
+}
+.celu{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 }
