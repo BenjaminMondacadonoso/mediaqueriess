@@ -35,7 +35,7 @@ footer{
     grid-area: footer;
     background-color: #000;
     height: 10vh;
-    /* width: 100vw; */
+    width: 100vw;
     color: white;
     text-align: center;
     }
@@ -46,8 +46,10 @@ footer{
     "nav nav"
     "aside section"
     "footer footer";
-
-    /* grid-template-rows: 0vh 90vh 1vh; */
+    grid-template-rows: 10vh 90vh;
+    grid-template-columns: 20vw 80vw;
+    height: 100vh;
+    margin: 0;
 }
 .grid-products{
     display: grid;
@@ -88,7 +90,7 @@ footer{
         display: none;
     }
     footer{
-        width: 20vw;
+        width: 20%;
     }
     .celu{
         display: none;
@@ -98,7 +100,11 @@ footer{
         display: flex;
     }
     .comp{
-        display: ;
+        display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: 100vh;
+    width: 100vw;
     }
     .barraselec{
         background-color: rgb(16, 117, 206);
@@ -129,3 +135,6 @@ aside{
     margin-bottom: 20px;
 }
 }
+@media (min-width: 1024px) {
+    
+  }
